@@ -1,0 +1,14 @@
+@import './styles/base.css';
+@import './styles/layout.css';
+@import './styles/auth.css';
+@import './styles/dashboard.css';
+@import './styles/publications.css';
+@import './styles/external.css';
+@import './styles/documents.css';
+@import './styles/verification.css';
+@import './styles/points.css';
+@import './styles/reports.css';
+@import './styles/admin.css';
+@import './styles/admin-portal.css';
+@import './styles/profile.css';
+@import './styles/research-assistant.css';

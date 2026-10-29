@@ -1,0 +1,270 @@
+/* Step 15D — AI Research Assistant */
+
+.ra-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ra-scope__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.ra-hint {
+  margin: 12px 0 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.ra-hint a {
+  color: var(--primary);
+}
+
+.ra-suggest {
+  margin-bottom: 16px;
+}
+
+.ra-suggest__title {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.ra-suggest__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ra-conversation {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 8px 0 4px;
+  min-height: 80px;
+}
+
+.ra-empty {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 14px;
+}
+
+.ra-msg {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 820px;
+}
+
+.ra-msg--user {
+  align-self: flex-end;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.ra-msg__who {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+.ra-msg--user .ra-msg__text {
+  margin: 0;
+  padding: 10px 14px;
+  background: var(--primary-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.ra-msg__answer {
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.ra-msg__answer p {
+  margin: 0 0 10px;
+  overflow-wrap: anywhere;
+}
+
+.ra-msg__answer p:last-child {
+  margin-bottom: 0;
+}
+
+.ra-msg__answer ul {
+  margin: 0 0 10px;
+  padding-left: 20px;
+}
+
+.ra-msg__answer li {
+  margin-bottom: 4px;
+}
+
+.ra-note {
+  margin: 0;
+  font-size: 13px;
+  color: var(--warning);
+}
+
+.ra-meta {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-soft);
+}
+
+.ra-loading {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 12px 16px;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.ra-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: ra-spin 0.8s linear infinite;
+}
+
+@keyframes ra-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ra-sources {
+  margin-top: 4px;
+  padding: 12px 14px;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.ra-sources__title {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+.ra-sources__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ra-source {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 13.5px;
+}
+
+.ra-source__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.ra-source__link:hover,
+.ra-source__link:focus-visible {
+  text-decoration: underline;
+}
+
+.ra-source__page {
+  color: var(--text-muted);
+}
+
+.ra-source__rel {
+  color: var(--text-soft);
+  font-size: 12px;
+}
+
+.ra-composer {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  margin-top: 16px;
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+}
+
+.ra-composer__input {
+  flex: 1 1 auto;
+  resize: vertical;
+  min-height: 52px;
+  max-height: 180px;
+  font-family: var(--font);
+  line-height: 1.45;
+}
+
+.ra-composer__send {
+  flex: 0 0 auto;
+}
+
+.ra-error {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .ra-scope__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ra-msg {
+    max-width: 100%;
+  }
+
+  .ra-composer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ra-composer__send {
+    width: 100%;
+  }
+}
+
+@media (max-width: 390px) {
+  .ra-suggest__items {
+    flex-direction: column;
+  }
+
+  .ra-suggest__items .btn {
+    width: 100%;
+    text-align: left;
+  }
+}

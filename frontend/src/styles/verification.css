@@ -1,0 +1,93 @@
+/* Step 14E — publication verification & review */
+
+.review-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.vhistory {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.vhistory__item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-alt);
+  padding: 0.75rem 0.9rem;
+}
+
+.vhistory__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.vhistory__action {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--text);
+}
+
+.vhistory__action--verify {
+  color: var(--success);
+}
+
+.vhistory__action--reject {
+  color: var(--danger);
+}
+
+.vhistory__date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.vhistory__transition {
+  margin: 0.25rem 0 0;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.vhistory__reason {
+  margin: 0.4rem 0 0;
+  font-size: 0.92rem;
+  color: var(--text);
+}
+
+.vhistory__notes {
+  margin: 0.25rem 0 0;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.vhistory__error {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.vhistory__error .alert {
+  margin-bottom: 0;
+}
+
+.review-reject__textarea {
+  min-height: 6.5rem;
+  resize: vertical;
+}
+
+@media (max-width: 760px) {
+  .review-actions {
+    width: 100%;
+  }
+
+  .review-actions .btn {
+    flex: 1 1 auto;
+  }
+}

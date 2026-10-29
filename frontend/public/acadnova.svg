@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="AcadNova">
+  <defs>
+    <linearGradient id="anTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="anRight" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="anBottom" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+    <linearGradient id="anLeft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#4338ca"/>
+    </linearGradient>
+    <linearGradient id="anOrbit" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <circle cx="24" cy="24" r="21.5" fill="none" stroke="url(#anOrbit)" stroke-width="1.7" stroke-linecap="round" pathLength="100" stroke-dasharray="74 26" transform="rotate(-90 24 24)" opacity="0.9"/>
+  <circle cx="24" cy="2.5" r="2.4" fill="#4f46e5"/>
+  <polygon points="24,7 38,24 24,24" fill="url(#anTop)"/>
+  <polygon points="38,24 24,41 24,24" fill="url(#anRight)"/>
+  <polygon points="24,41 10,24 24,24" fill="url(#anBottom)"/>
+  <polygon points="10,24 24,7 24,24" fill="url(#anLeft)"/>
+  <circle cx="24" cy="24" r="2.1" fill="#ffffff" opacity="0.92"/>
+</svg>

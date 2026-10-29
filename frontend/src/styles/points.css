@@ -1,0 +1,202 @@
+/* Step 14F — points & eligibility */
+
+.points-page__actions {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.points-page__year {
+  min-width: 14rem;
+}
+
+.points-page__recalc {
+  white-space: nowrap;
+}
+
+.points-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.points-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.points-status--eligible {
+  color: var(--success);
+}
+
+.points-status--not-yet {
+  color: var(--warning);
+}
+
+.points-status--unknown {
+  color: var(--text-muted);
+}
+
+.points-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.points-progress__label {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.points-progress__track {
+  width: 100%;
+  height: 12px;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.points-progress__bar {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.points-progress__bar--eligible {
+  background: var(--success);
+}
+
+.points-progress__bar--not-yet {
+  background: var(--warning);
+}
+
+.points-progress__caption {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.points-progress--unknown {
+  padding: 0.25rem 0;
+}
+
+.points-info__list {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.points-categories {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.6rem;
+}
+
+.points-categories__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-alt);
+  padding: 0.55rem 0.75rem;
+}
+
+.points-categories__label {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.points-categories__value {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.points-table__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.points-table__subtitle {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.points-table__points,
+.points-table__points-col {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.points-table__points {
+  font-weight: 700;
+}
+
+.points-table__note {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+.points-table__note-block {
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.points-table__error {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.points-table__error .alert {
+  margin-bottom: 0;
+}
+
+.panel__empty--flush {
+  margin-top: 0;
+}
+
+@media (max-width: 960px) {
+  .points-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .points-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .points-page__actions {
+    width: 100%;
+  }
+
+  .points-page__year {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}

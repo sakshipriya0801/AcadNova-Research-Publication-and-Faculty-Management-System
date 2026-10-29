@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+pymongo
+dnspython
+email-validator
+PyJWT
+pwdlib
+bcrypt
+python-multipart
+pymupdf
+pytest
+httpx
